@@ -2,6 +2,13 @@
 
 A poker merchandise store implementing the final proposal from “Draft project proposal submission.” Visitors browse six products, reserve shared stock in a private cart, and complete a simulated checkout. No account, payment, or personal information is required.
 
+## Live website and source
+
+- Website: https://the-poker-drop.onrender.com
+- Public repository: https://github.com/JohnDavid923/PokerDrop
+
+The website runs on Render's Free plan and does not require this computer to be running. After a period without traffic, the first visit may take approximately one minute while Render wakes the service. No login is required to shop. Checkout is simulated.
+
 ## Run locally
 
 Use Node.js 22.13 or newer and pnpm 11:
@@ -39,9 +46,9 @@ The tests cover 12 simultaneous WebSocket clients, competing reservations, sold-
 
 To demonstrate it manually, open the public URL on two devices. Add an item on one and watch the available count change on the other. Remove it and watch the count recover. Checkout shows an explicitly simulated order confirmation.
 
-## Public demo from this computer
+## Optional local public tunnel
 
-Current demo: https://designs-specific-boating-harold.trycloudflare.com
+The original development demo used a temporary Cloudflare tunnel. Use the Render website above for the submitted project.
 
 Verified with an unauthenticated HTTP request and 12 simultaneous WebSocket clients. All 12 observed the same reservation and release updates. Repeat that check with `node test/public-smoke.js <public-url>` while merchandise is available. The smoke test releases its reservation and does not complete a purchase.
 
