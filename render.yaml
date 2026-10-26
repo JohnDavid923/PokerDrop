@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: the-poker-drop
+    runtime: node
+    plan: free
+    buildCommand: npx --yes pnpm@11.25.0 install --frozen-lockfile
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22.16.0

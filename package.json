@@ -1,0 +1,16 @@
+{
+  "name": "the-poker-drop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A shared poker merchandise store with live WebSocket inventory and simulated checkout.",
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/store.test.js",
+    "test:public": "node test/public-smoke.js"
+  },
+  "dependencies": { "express": "^5.1.0", "socket.io": "^4.8.1" },
+  "devDependencies": { "socket.io-client": "^4.8.1" }
+}
